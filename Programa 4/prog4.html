@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Contador de Palabras</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 30px; background: #f0f0f0; }
+        input, textarea, button { font-size: 16px; margin: 5px 0; padding: 8px; width: 100%; max-width: 500px; }
+        .resultado { margin-top: 20px; font-weight: bold; }
+    </style>
+</head>
+<body>
+    <h2>🔍 Contador de Ocurrencias</h2>
+
+    <label for="cadena">Cadena C:</label>
+    <textarea id="cadena" rows="6" placeholder="Escribe el texto aquí..."></textarea>
+
+    <label for="palabra">Palabra E a buscar:</label>
+    <input type="text" id="palabra" placeholder="Escribe la palabra a buscar...">
+
+    <button onclick="contarPalabra()">Contar ocurrencias</button>
+
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        function contarPalabra() {
+            const texto = document.getElementById("cadena").value;
+            const palabra = document.getElementById("palabra").value.trim();
+
+            if (palabra === "") {
+                document.getElementById("resultado").textContent = "⚠️ Por favor, ingresa una palabra.";
+                return;
+            }
+
+            const regex = new RegExp(`\\b${palabra}\\b`, 'gi'); // \b es límite de palabra
+            const coincidencias = texto.match(regex);
+            const cantidad = coincidencias ? coincidencias.length : 0;
+
+            document.getElementById("resultado").innerHTML = 
+                `🔎 La palabra "<strong>${palabra}</strong>" aparece <strong>${cantidad}</strong> vez/veces.`;
+        }
+    </script>
+</body>
+</html>

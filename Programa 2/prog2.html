@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Polinomios (x + 1)^n</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f4f4f4; }
+    input, button { padding: 10px; font-size: 16px; }
+    .resultado { margin-top: 20px; white-space: pre-wrap; background: #fff; padding: 15px; border-radius: 8px; }
+  </style>
+</head>
+<body>
+
+  <h2>🔢 Polinomio (x + 1)^n</h2>
+
+  <label for="n">Introduce un valor de n (ej: 0 a 7):</label>
+  <input type="number" id="n" min="0" max="20" value="5">
+  <button onclick="generar()">Generar</button>
+
+  <div class="resultado" id="resultado"></div>
+
+  <script>
+    // Función para calcular combinaciones (n choose k)
+    function combinatoria(n, k) {
+      let num = 1, den = 1;
+      for (let i = 1; i <= k; i++) {
+        num *= (n - i + 1);
+        den *= i;
+      }
+      return num / den;
+    }
+
+    function generar() {
+      const n = parseInt(document.getElementById("n").value);
+      const coeficientes = [];
+
+      // Generar coeficientes del polinomio
+      for (let k = 0; k <= n; k++) {
+        coeficientes.push(combinatoria(n, k));
+      }
+
+      // Mostrar coeficientes tipo Pascal
+      let salida = `🧮 Coeficientes de (x + 1)^${n}:
+(${n}): ${coeficientes.join(' ')}
+
+`;
+
+      // Mostrar forma del polinomio
+      salida += `📐 Polinomio:
+(x + 1)^${n} = `;
+      for (let i = 0; i <= n; i++) {
+        const coef = coeficientes[i];
+        const exponente = n - i;
+
+        if (exponente === 0) {
+          salida += `${coef}`;
+        } else if (exponente === 1) {
+          salida += `${coef}x + `;
+        } else {
+          salida += `${coef}x^${exponente} + `;
+        }
+      }
+
+      salida = salida.replace(/\+\s*$/, "");
+      document.getElementById("resultado").textContent = salida;
+    }
+  </script>
+
+</body>
+</html>

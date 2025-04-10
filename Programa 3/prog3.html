@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Evaluador de Expresiones Aritméticas</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; background: #f4f4f4; }
+        input, button { padding: 10px; font-size: 16px; }
+        .resultado { margin-top: 20px; white-space: pre-wrap; background: #fff; padding: 15px; border-radius: 8px; }
+    </style>
+</head>
+<body>
+
+    <h2>🧮 Evaluador de Expresiones Aritméticas</h2>
+
+    <label for="expresion">Introduce la expresión:</label>
+    <input type="text" id="expresion" value="(125E10 - 1e15)/5E-85*15">
+    <button onclick="evaluar()">Evaluar</button>
+
+    <div class="resultado" id="resultado"></div>
+
+    <script>
+        // Función para evaluar la expresión aritmética
+        function evaluar() {
+            // Obtener la expresión introducida
+            const expresion = document.getElementById("expresion").value;
+
+            // Reemplazar notación científica 'E' con 'e' para que sea compatible con JavaScript
+            const expresionCorregida = expresion.replace(/E([+\-]?\d+)/g, 'e$1');
+            
+            try {
+                // Evaluar la expresión usando el eval(), que soporta operadores y notación científica
+                const resultado = eval(expresionCorregida);
+                document.getElementById("resultado").textContent = `Resultado: ${resultado}`;
+            } catch (error) {
+                document.getElementById("resultado").textContent = `Error en la expresión: ${error.message}`;
+            }
+        }
+    </script>
+
+</body>
+</html>
+ 
