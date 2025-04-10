@@ -1,6 +1,6 @@
 # Validador de Notación FEN (Forsyth–Edwards Notation)
 
-Este proyecto permite validar si una cadena de texto corresponde a una notación FEN válida. FEN es un formato estándar utilizado en ajedrez para describir posiciones en el tablero.
+Este programa permite validar si una cadena de texto corresponde a una notación FEN válida. FEN es un formato estándar utilizado en ajedrez para describir posiciones en el tablero.
 
 # Tecnologías utilizadas
 
@@ -10,7 +10,7 @@ Este proyecto permite validar si una cadena de texto corresponde a una notación
 
 ---
 
-# Estructura del Proyecto
+# Estructura de esta carpeta
 
 ```
 Programa 1/
@@ -18,36 +18,35 @@ Programa 1/
 ├── README.md        # Documentación del programa
 ```
 
-# Cómo ejecutar el proyecto
+# Cómo ejecutar el programa
 
-1. **Descarga o clona** este repositorio:
+ 1. Descarga o clona este repositorio:
    ```bash
-   git clone https://github.com/tuusuario/validador-fen.git
+   git clone https://github.com/Anyelis-Coro/Prueba-Diagnostica.git
    cd Programa 1
    ```
 
-2. **Abre el archivo `prog1.html`** en el navegador (doble clic o botón derecho → "Abrir con...").
+2. Abre el archivo `prog1.html` en el navegador (doble clic o botón derecho → "Abrir con...").
 
-3. **Ingresa una cadena FEN** en el área de texto.
+3. Ingresa una cadena FEN en el área de texto.
 
-4. **Presiona el botón "Validar"** para verificar si la cadena es válida.
+4. Presiona el botón "Validar" para verificar si la cadena es válida.
 
 ---
 
-## ✅ Ejemplo de cadena FEN válida
+# Ejemplo de cadena FEN válida
 
 ```
 rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1
 ```
-
 ---
 
-## 📚 Recursos de interés
+# Recursos de interés
 
 - [Wikipedia - Forsyth–Edwards Notation](https://en.wikipedia.org/wiki/Forsyth%E2%80%93Edwards_Notation)
 
 ---
 
-## 👨‍💻 Autor
+# Autor
 
 - Desarrollado por Anyelis Coro
