@@ -20,17 +20,17 @@ Programa 1/
 
 # Cómo ejecutar el programa
 
- 1. **Descarga o clona este repositorio:
+ 1. Descarga o clona este repositorio:
    ```bash
    git clone https://github.com/Anyelis-Coro/Prueba-Diagnostica.git
    cd Programa 1
    ```
 
-2. **Abre el archivo `prog1.html` en el navegador (doble clic o botón derecho → "Abrir con...").
+2. Abre el archivo `prog1.html` en el navegador (doble clic o botón derecho → "Abrir con...").
 
-3. **Ingresa una cadena FEN en el área de texto.
+3. Ingresa una cadena FEN en el área de texto.
 
-4. **Presiona el botón "Validar" para verificar si la cadena es válida.
+4. Presiona el botón "Validar" para verificar si la cadena es válida.
 
 ---
 
